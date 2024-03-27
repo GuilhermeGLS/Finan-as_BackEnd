@@ -1,0 +1,24 @@
+{
+  "name": "app-financas",
+  "version": "1.0.0",
+  "description": "Aplicação para controle financeiro",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuilhermeGLS/Finan-as_BackEnd.git"
+  },
+  "author": "Guilherme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuilhermeGLS/Finan-as_BackEnd/issues"
+  },
+  "homepage": "https://github.com/GuilhermeGLS/Finan-as_BackEnd#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql2": "^3.9.2",
+    "sequelize": "^6.37.1"
+  }
+}

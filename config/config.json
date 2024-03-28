@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "Guim@$1806",
     "database": "myfinancas",
     "host": "127.0.0.1",
     "dialect": "mysql"

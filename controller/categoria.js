@@ -3,48 +3,48 @@ const model = require('../models');
 const categoria = model.Categoria;
 
 module.exports = {
-    async create(req, res) {
+    async create(request, response) {
         try {
             const {
                 descricao
-            } = req.body
+            } = request.body
 
             const Categoria = await categoria.create({
                 descricao
             });
 
-            return res.json({ msg: "Categoria cadastrada com sucesso!! " });
+            return response.json({ msg: "Categoria cadastrada com sucesso!! " });
 
         } catch (error) {
-            return res.json({ msg: "Não foi possivel cadastrar a categoria " + error });
+            return response.json({ msg: "Não foi possivel cadastrar a categoria " + error });
 
         }
     },
 
-    async update(req, res) {
+    async update(request, response) {
         try {
-            const { id } = req.params;
+            const { id } = request.params;
 
             const {
                 descricao
-            } = req.body
+            } = request.body
 
             const Categoria = await categoria.update({
                 descricao
 
             }, { where: { id } });
 
-            return res.json({ msg: "Categoria alterada com sucesso!! " });
+            return response.json({ msg: "Categoria alterada com sucesso!! " });
 
 
         } catch (error) {
-            return res.json({ msg: "Não foi possivel alterar a categoria " + error });
+            return response.json({ msg: "Não foi possivel alterar a categoria " + error });
         }
     },
 
-    async findAll(req, res) {
+    async findAll(request, response) {
         try {
-            const { page } = req.params;
+            const { page } = request.params;
             const limite = 5;
 
             const Categoria = await categoria.findAndCountAll({
@@ -55,10 +55,10 @@ module.exports = {
                 offset: parseInt(page)
             })
 
-            return res.json(Categoria);
+            return response.json(Categoria);
 
         } catch (error) {
-            return res.json("Erro ao listar categorias " + error);
+            return response.json("Erro ao listar categorias " + error);
         }
     }
 

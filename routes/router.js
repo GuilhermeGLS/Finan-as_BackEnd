@@ -15,7 +15,7 @@ router.post('/criar/financa', financa.create);
 // Listando todas pela página
 router.get('/listar/financa/:page', financa.findAll);
 
-// Listando por id
+// Listando por categoria_id
 router.get('/pesquisar/financa/categoria_id/:id', financa.findById);
 
 // Listar por data
